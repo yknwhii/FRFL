@@ -1,0 +1,45 @@
+
+.main {
+  height: 40em;
+  font-family: Sans-Serif;
+  color: #000099 ;
+  background-color: #00CCCC ;
+border-radius: 1em;
+padding: 1em;
+border: 5px solid #000099;
+}
+
+.label {
+  text-align: center;
+}
+
+.objects {
+  display: flex;
+}
+
+.btn {
+  font-size: 10px;
+  width: 20mm;
+  height: 20mm;
+  flex: 1 1 auto;
+  margin: 10px;
+  background-color: #FFB266;
+  border-radius: 1em;
+  border-width: 4px;
+  border-color:#000099 ;
+  padding: 0px;
+  
+}
+
+img {
+  width: 10mm;
+  height: 10mm;
+  border-radius: 0.5em;
+}
+
+.info {
+  border-radius: 1em;
+  background-color: #FFB266;
+  padding: 6px;
+ border: 3px solid #000099;
+}
