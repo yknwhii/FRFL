@@ -1,10 +1,13 @@
 const objects = ["stone", "paper", "scissors"];
 let userScore = 0;
 let PCScore = 0;
+let userObject = "";
+let PCObject = "";
+let resultStr = "";
 
-function GetUserChoice (){
-  return prompt("Select your object (stone,paper,scissors):");
-}
+const label_score = document.querySelector("#score")
+const label_result = document.querySelector("#result")
+const label_choices = document.querySelector("#choices")
 
 function GetPCChoice(){
   return objects[Math.floor(Math.random()*100)%3];
@@ -14,56 +17,69 @@ function CheckIfStone(obj){
   return obj == "stone"?true:false;
 }
 
-
 function CheckIfPaper(obj){
   return obj == "paper"?true:false;
 }
-
 
 function CheckIfScissors(obj){
   return obj == "scissors" ? true:false;
 }
 
-function PlayRound(userObject, PCObject){
-  console.log(`User choice: ${userObject}, PC choice: ${PCObject}`);
-  alert(`User choice: ${userObject}, PC choice: ${PCObject}`);
-  if (userObject == PCObject) {
+function PlayRound(userObj, PCObj){
+  if (userObj == PCObj) {
    return 0; 
   } else {
-  if (CheckIfStone(userObject)) {
-   return CheckIfPaper(PCObject) ? -1:1;
-  } else if (CheckIfPaper(userObject)){
-   return CheckIfScissors(PCObject) ? -1:1;
-  } else if (CheckIfScissors(userObject)){
-    return CheckIfStone(PCObject) ? -1:1;
+  if (CheckIfStone(userObj)) {
+   return CheckIfPaper(PCObj) ? -1:1;
+  } else if (CheckIfPaper(userObj)){
+   return CheckIfScissors(PCObj) ? -1:1;
+  } else if (CheckIfScissors(userObj)){
+    return CheckIfStone(PCObj) ? -1:1;
   }
   }
 }
 
-function RoundResults(){
-  switch (PlayRound(GetUserChoice(), GetPCChoice())){
+function RoundResults(userChoice){
+  userObject = userChoice;
+  PCObject = GetPCChoice();
+  switch (PlayRound(userObject,PCObject)){
     case 1: userScore +=1;
-    console.log("User win in this round.");
-    alert("User win in this round.");
+    resultStr = "User win in this round. ";
     break;
     case -1: PCScore +=1;
-    console.log("PC win in this round.")
-    alert("PC win in this round.");
+    resultStr = "PC win in this round. ";
     break;
     case 0: 
-    console.log("Nobody win in this round.");
-    alert("Nobody win in this round.");
+    resultStr = "Nobody win in this round. ";
     break;
   }
-  console.log(`User score: ${userScore}, PC score: ${PCScore}`);
-  alert(`User score: ${userScore}, PC score: ${PCScore}`);
+  WriteResults()
 }
 
-
-function PlaySPS(){
-  for (let i = 0; i < 5; i++){
-    RoundResults();
-  }
+function WriteResults(){
+  label_score.textContent = `User score: ${userScore}, PC score: ${PCScore} `;
+  label_result.textContent = resultStr;
+label_choices.textContent = `User choice: ${userObject}, PC choice: ${PCObject} `;
 }
 
-PlaySPS();
+function ResetScore(){
+  userScore = 0;
+  PCScore = 0;
+  WriteResults();
+}
+
+const btn_rock = document.querySelector("#rock");
+btn_rock.addEventListener("click", () => {RoundResults(objects[0]);});
+
+const btn_paper = document.querySelector("#paper");
+btn_paper.addEventListener("click",  () => {RoundResults(objects[1]);});
+
+
+const btn_scissors = document.querySelector("#scissors")
+btn_scissors.addEventListener("click", () => {RoundResults(objects[2]);});
+
+const btn_reset = document.querySelector("#reset");
+btn_reset.addEventListener("click", ResetScore);
+
+
+

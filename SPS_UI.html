@@ -4,24 +4,25 @@
     <meta charset="UTF-8">
     <title>Rock, paper, scissors</title>
     <link rel="stylesheet" href="RPS_style.css">
-    <script src="SPS.js"></script>
-     <script src="RPS.js" defer></script>
+    <script src="SPS.js" defer></script>
   </head>
 
   <body>
     <div class="main">
-    <h1 class="label">"Rock, paper, scissors" game</h1>
+    <h1 class="label">Rock, paper, scissors game</h1>
     <div class="controls">
     <h3 class="label">Select your object:</h3>
       <div class="objects">
-     <button class="rock"><img alt="rock"></button> 
-      <button class="rock"><img alt="paper"></button> 
-      <button class="rock"><img alt="scissors"></button> 
-      <button class="reset"><img alt="reset"></button> 
+     <button id="rock"><img alt="rock"></button> 
+      <button id="paper"><img alt="paper"></button> 
+      <button id="scissors"><img alt="scissors"></button> 
+      <button id="reset"><img alt="reset"></button> 
       </div>
-      <p class="result">
-        Game score:
-      </p>
+       <p id="score">
+        Game score: user = 0, PC = 0.
+       </p>
+       <p id="result"></p>
+       <p id="choices"></p>
        </div>
     </div>
   </body>
