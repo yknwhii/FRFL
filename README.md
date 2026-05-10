@@ -7,7 +7,7 @@ Scissors beat paper.
 Paper beat rock.
 
 
-Scossprs Image by <a href="https://pixabay.com/users/artsybeekids-392631/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5693652">Venita Oberholster</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5693652">Pixabay</a>
+Scissors Image by <a href="https://pixabay.com/users/artsybeekids-392631/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5693652">Venita Oberholster</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=5693652">Pixabay</a>
 
 Paper Image by <a href="https://pixabay.com/users/honykunst-1513263/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1349664">Robin Honacker Handgezeichnete Grafikkunst</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1349664">Pixabay</a>
 
